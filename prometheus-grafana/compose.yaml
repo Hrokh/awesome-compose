@@ -23,3 +23,9 @@ services:
       - ./grafana:/etc/grafana/provisioning/datasources
 volumes:
   prom_data:
+   ecoflow_exporter:
+    image: ghcr.io/berezhinskiy/ecoflow_exporter
+    environment:
+      DEVICE_SN: R331ZEB4ZEBU0140
+      ECOFLOW_USERNAME: grokh.ivan@gmail.com
+      ECOFLOW_PASSWORD: F@a0813027905
