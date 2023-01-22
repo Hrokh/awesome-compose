@@ -23,3 +23,9 @@ services:
       - ./grafana:/etc/grafana/provisioning/datasources
 volumes:
   prom_data:
+  ecoflow_exporter:
+    image: ghcr.io/berezhinskiy/ecoflow_exporter
+    environment:
+      DEVICE_SN: <device id shown in the mobile application>
+      ECOFLOW_USERNAME: <email entered in the mobile application>
+      ECOFLOW_PASSWORD: "<password entereed in the mobile application>"
